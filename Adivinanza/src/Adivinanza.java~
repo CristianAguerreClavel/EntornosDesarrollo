@@ -1,0 +1,32 @@
+import java.util.Random;
+import java.util.Scanner;
+public class Adivinanza {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Random random = new Random();
+		int numeroAleatorio;
+		
+		numeroAleatorio= random.nextInt(1000) + 1;
+		System.out.println("Numero aleatorio: " + numeroAleatorio);
+		
+		int numUsuario;
+		
+		while (true){
+			System.out.print("Introduce un numero: ");
+			Scanner scanner= new Scanner (System.in); //escaner asociado al tecaldo
+			String Linea = scanner.nextLine();
+			numUsuario= Integer.parseInt(Linea);
+			System.out.println("Has escrito: "+ Linea);
+		
+		if (numUsuario== numeroAleatorio)
+			break;
+		}
+		System.out.println("Has acertado!!!");
+		
+	}
+		
+
+}
